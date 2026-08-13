@@ -1,7 +1,5 @@
 # SQL_AACT_DATABASE — Oncology Clinical Trials Analysis
 
-## About
-
 I built this project to practice SQL on a real, large-scale relational database rather than a small toy dataset. I used AACT (Aggregate Analysis of ClinicalTrials.gov) — a public database that mirrors all the data submitted to ClinicalTrials.gov — and focused specifically on oncology (cancer) trials.
 
 The database has ~600,000 studies spread across 50+ linked tables (sponsors, conditions, outcomes, facilities, etc.), so working with it meant actually dealing with joins across tables, messy/missing data, and inconsistent free-text entries — the kind of problems you don't run into with a clean single CSV.
