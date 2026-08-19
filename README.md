@@ -48,6 +48,7 @@ queries/
 ├── 07_rank_vs_dense_rank.sql
 ├── 08_yearly_trend_lag_analysis.sql
 └── 09_lead_yoy_verification_trend.sql
+└── 09_sponsor_all_phase.sql
 ```
 
 Each file has comments explaining what the query does and what I found from it, including the data issues above.
