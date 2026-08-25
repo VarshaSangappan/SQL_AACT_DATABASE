@@ -29,6 +29,7 @@ I think these debugging moments are honestly more representative of real data wo
 - **Statistically significant results are less common in oncology outcomes** — 34.4% vs. 40.4% database-wide.
 - **A lot of safety data is missing.** ~93% of studies have no recorded count of serious adverse event subjects. That's a real transparency gap, not just a quirk of this dataset.
 - **Reporting activity has picked up sharply since 2023** — pending-results events nearly tripled between 2022 and 2024, which is worth a follow-up read on regulatory context if I get time.
+- **Indexing works, but only when the query pattern supports it** - An index sped up an exact-match filter noticeably, and gave a genuine ~30% improvement on a moderately selective column. It had zero effect on a wildcard %contains% search — because a standard B-tree index can't be used for that pattern at all, not because indexing is unreliable.
 
 ## SQL commands used
 
@@ -49,7 +50,11 @@ queries/
 ├── 08_yearly_trend_lag_analysis.sql
 └── 09_lead_yoy_verification_trend.sql
 └── 10_sponsor_all_phase.sql
+├── 11_dml_ddl_transactions_practice.sql   -- practice only, not analysis
+└── 12_indexing_explain_analyze_practice.sql   -- practice only, not analysis
 ```
+
+Files 11 and 12 are general SQL fundamentals practice (transactions, DML/DDL, indexing behavior) rather than oncology-specific analysis — kept in the repo because they document real hands-on learning, but they're a different kind of file from the rest.
 
 Each file has comments explaining what the query does and what I found from it, including the data issues above.
 
